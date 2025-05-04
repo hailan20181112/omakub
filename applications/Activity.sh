@@ -1,3 +1,7 @@
+#!/bin/bash
+# 创建Activity桌面应用程序 - 显示系统活动监视器
+
+# 创建桌面文件
 cat <<EOF >~/.local/share/applications/Activity.desktop
 [Desktop Entry]
 Version=1.0

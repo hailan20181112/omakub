@@ -1,3 +1,7 @@
+#!/bin/bash
+# 创建About桌面应用程序 - 显示系统信息
+
+# 创建桌面文件
 cat <<EOF >~/.local/share/applications/About.desktop
 [Desktop Entry]
 Version=1.0

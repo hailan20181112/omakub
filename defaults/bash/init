@@ -1,15 +1,22 @@
+# Bash初始化脚本 - 加载各种工具和功能
+
+# 如果mise（多版本语言环境管理器）可用，则激活它
 if command -v mise &> /dev/null; then
   eval "$(mise activate bash)"
 fi
 
+# 如果zoxide（智能目录跳转工具）可用，则初始化它
 if command -v zoxide &> /dev/null; then
   eval "$(zoxide init bash)"
 fi
 
+# 如果fzf（模糊查找工具）可用，则加载其补全和键绑定
 if command -v fzf &> /dev/null; then
+  # 加载fzf的bash补全功能
   if [[ -f /usr/share/bash-completion/completions/fzf ]]; then
     source /usr/share/bash-completion/completions/fzf
   fi
+  # 加载fzf的键绑定功能
   if [[ -f /usr/share/doc/fzf/examples/key-bindings.bash ]]; then
     source /usr/share/doc/fzf/examples/key-bindings.bash
   fi

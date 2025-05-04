@@ -1,3 +1,7 @@
+#!/bin/bash
+# 创建Omakub桌面应用程序 - Omakub控制面板
+
+# 创建桌面文件
 cat <<EOF >~/.local/share/applications/Omakub.desktop
 [Desktop Entry]
 Version=1.0

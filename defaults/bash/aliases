@@ -1,27 +1,27 @@
-# File system
-alias ls='eza -lh --group-directories-first --icons=auto'
-alias lsa='ls -a'
-alias lt='eza --tree --level=2 --long --icons --git'
-alias lta='lt -a'
-alias ff="fzf --preview 'batcat --style=numbers --color=always {}'"
-alias fd='fdfind'
-alias cd='z'
+# 文件系统相关别名
+alias ls='eza -lh --group-directories-first --icons=auto'  # 使用eza替代ls，显示详细信息、图标和将目录优先显示
+alias lsa='ls -a'                                          # 显示所有文件（包括隐藏文件）
+alias lt='eza --tree --level=2 --long --icons --git'       # 以树形结构显示目录，包含git信息
+alias lta='lt -a'                                          # 以树形结构显示所有文件（包括隐藏文件）
+alias ff="fzf --preview 'batcat --style=numbers --color=always {}'" # 使用fzf模糊查找并预览文件
+alias fd='fdfind'                                          # 使用fdfind查找文件
+alias cd='z'                                               # 使用zoxide（z）替代cd命令，支持智能跳转
 
-# Directories
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
+# 目录导航快捷方式
+alias ..='cd ..'                                           # 返回上一级目录
+alias ...='cd ../..'                                       # 返回上两级目录
+alias ....='cd ../../..'                                   # 返回上三级目录
 
-# Tools
-alias n='nvim'
-alias g='git'
-alias d='docker'
-alias r='rails'
-alias bat='batcat'
-alias lzg='lazygit'
-alias lzd='lazydocker'
+# 常用工具快捷方式
+alias n='nvim'                                             # 快速启动Neovim编辑器
+alias g='git'                                              # 快速使用Git
+alias d='docker'                                           # 快速使用Docker
+alias r='rails'                                            # 快速使用Rails
+alias bat='batcat'                                         # 使用batcat替代cat，支持语法高亮
+alias lzg='lazygit'                                        # 启动LazyGit（Git终端UI）
+alias lzd='lazydocker'                                     # 启动LazyDocker（Docker终端UI）
 
-# Git
-alias gcm='git commit -m'
-alias gcam='git commit -a -m'
-alias gcad='git commit -a --amend'
+# Git操作快捷方式
+alias gcm='git commit -m'                                  # Git提交并添加消息
+alias gcam='git commit -a -m'                              # Git添加所有更改并提交
+alias gcad='git commit -a --amend'                         # Git修改最后一次提交
